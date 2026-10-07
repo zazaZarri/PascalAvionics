@@ -35,7 +35,3 @@ def aggiorna_stato(codice: str, nuovo_stato: str) -> bool:
     APPARATI[codice]["stato"] = nuovo_stato.upper()
     return True
 
-
-if __name__ == "__main__":
-    print("APPARATI FINALI")
-    print(APPARATI)
