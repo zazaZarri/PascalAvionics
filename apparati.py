@@ -19,6 +19,15 @@ def aggiungi_apparato(codice: str, nome: str, bus: str, stato: str = "OK") -> bo
     }
     return True
 
+def rimuovi_apparato(codice: str) -> bool:
+    codice = codice.upper()
+
+    if codice not in APPARATI:
+        print(f"Errore: Apparato con codice '{codice}' non trovato.")
+        return False
+
+    del APPARATI[codice]
+    return True
 
 def aggiorna_stato(codice: str, nuovo_stato: str) -> bool:
     codice = codice.upper()
